@@ -17,5 +17,6 @@ class Simulacion(models.Model):
     #borrar si es necesario intenro de manejar historial
     
 class HistorialConsulta(models.Model):
-    fecha_registro = models.DateTimeField(auto_now_add=True)
+    
     simulacion = models.ForeignKey(Simulacion, on_delete=models.CASCADE)
+    fecha_registro = models.DateTimeField(auto_now_add=True)
