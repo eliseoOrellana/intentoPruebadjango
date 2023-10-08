@@ -42,30 +42,29 @@
 
   <div class="content-wrapper">
 
-
     <div class="container">
-        <h1>Resultado de Importación</h1>
-        <h2>Detalles del Pedido</h2>
-        <a href="{% url 'historial_consultas' %}" class="btn btn-primary">Ver Historial</a>
-    <ul>
-        <li>Nombre del Artículo: {{ datos.nombre_articulo }}</li>
-        <li>Código del Artículo: {{ datos.codigo_articulo }}</li>
-        <li>Proveedor: {{ datos.proveedor }}</li>
-        <li>Cantidad de Unidades: {{ datos.cantidad_unidades }}</li>
-        <li>Costo Unitario en USD: {{ datos.costo_unitario_usd }}</li>
-        <li>Costo de Envío a Chile en USD: {{ datos.costo_envio_usd }}</li>
-    </ul>
-        <h2>Resumen de Costos</h2>
-        <ul>
-            <li>Total del Pedido en CLP: {{ total_pedido_clp }}</li>
-            <li>Costo de Envío en CLP: {{ costo_envio_clp }}</li>
-            <li>6% Tasa de Aduana en CLP: {{ tasa_aduana_clp }}</li>
-            <li>19% IVA en CLP: {{ iva_clp }}</li>
-            <li>Total de Impuestos y Aduana en CLP: {{ total_impuestos_aduana_clp }}</li>
-            <li>Costo Total de la Compra en CLP: {{ costo_total_compra_clp }}</li>
-            <li>Costo Total de la Compra en USD: {{ costo_total_compra_usd }}</li>
-        </ul>
-    </div>
+      <h2 class="text-light">Detalles del Pedido</h2>
+      
+      <ul class="text-light">
+          <li>Nombre del Artículo: {{ datos.nombre_articulo }}</li>
+          <li>Código del Artículo: {{ datos.codigo_articulo }}</li>
+          <li>Proveedor: {{ datos.proveedor }}</li>
+          <li>Cantidad de Unidades: {{ datos.cantidad_unidades }}</li>
+          <li>Costo Unitario en USD: {{ datos.costo_unitario_usd }}</li>
+          <li>Costo de Envío a Chile en USD: {{ datos.costo_envio_usd }}</li>
+      </ul>
+      <h2 class="text-light">Resumen de Costos</h2>
+      <ul class="text-light">
+          <li>Total del Pedido en CLP: {{ total_pedido_clp }}</li>
+          <li>Costo de Envío en CLP: {{ costo_envio_clp }}</li>
+          <li>6% Tasa de Aduana en CLP: {{ tasa_aduana_clp }}</li>
+          <li>19% IVA en CLP: {{ iva_clp }}</li>
+          <li>Total de Impuestos y Aduana en CLP: {{ total_impuestos_aduana_clp }}</li>
+          <li>Costo Total de la Compra en CLP: {{ costo_total_compra_clp }}</li>
+          <li>Costo Total de la Compra en USD: {{ costo_total_compra_usd }}</li>
+      </ul>
+      <h2>Costo de importacon de su producto es:</h2>
+  </div>
 
     </div>
 

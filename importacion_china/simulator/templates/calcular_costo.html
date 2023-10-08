@@ -37,40 +37,44 @@
     </div>
 
     <!-- fin header -->
-    <div class="separador"></div>
+     <div class="separador"></div>
     <!-- separador -->
     
-    <div class="content-wrapper">
-    <form method="post" action="/calcular_costo/">
-      {% csrf_token %}
-      <div class="form-group">
-        <label for="nombre_articulo">Nombre del Artículo:</label>
-        <input type="text" name="nombre_articulo" id="nombre_articulo" required />
+     <div class="content-wrapper">
+      <div class="container mt-5">
+        <h2 class="text-white">Ingrese los datos:</h2>
+        <form method="post" action="/calcular_costo/" class="bg-dark text-white p-4 rounded">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="nombre_articulo" class="text-white">Nombre del Artículo:</label>
+            <input type="text" name="nombre_articulo" id="nombre_articulo" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="codigo_articulo" class="text-white">Código del Artículo:</label>
+            <input type="text" name="codigo_articulo" id="codigo_articulo" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="proveedor" class="text-white">Proveedor:</label>
+            <input type="text" name="proveedor" id="proveedor" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="cantidad_unidades" class="text-white">Cantidad de Unidades:</label>
+            <input type="number" name="cantidad_unidades" id="cantidad_unidades" class="form-control" min="1" required />
+          </div>
+          <div class="form-group">
+            <label for="costo_unitario_usd" class="text-white">Costo Unitario en USD:</label>
+            <input type="number" step="0.01" name="costo_unitario_usd" id="costo_unitario_usd" class="form-control" min="0.01" required />
+          </div>
+          <div class="form-group">
+            <label for="costo_envio_usd" class="text-white">Costo de Envío a Chile en USD:</label>
+            <input type="number" step="0.01" name="costo_envio_usd" id="costo_envio_usd" class="form-control" min="0.01" required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm btn-block">Calcular</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="codigo_articulo">Código del Artículo:</label>
-        <input type="text" name="codigo_articulo" id="codigo_articulo" required />
-      </div>
-      <div class="form-group">
-        <label for="proveedor">Proveedor:</label>
-        <input type="text" name="proveedor" id="proveedor" required />
-      </div>
-      <div class="form-group">
-        <label for="cantidad_unidades">Cantidad de Unidades:</label>
-        <input type="number" name="cantidad_unidades" id="cantidad_unidades" min="1" required />
-      </div>
-      <div class="form-group">
-        <label for="costo_unitario_usd">Costo Unitario en USD:</label>
-        <input type="number" step="0.01" name="costo_unitario_usd" id="costo_unitario_usd" min="0.01" required />
-      </div>
-      <div class="form-group">
-        <label for="costo_envio_usd">Costo de Envío a Chile en USD:</label>
-        <input type="number" step="0.01" name="costo_envio_usd" id="costo_envio_usd" min="0.01" required />
-      </div>
-      <button type="submit" class="btn btn-primary">Calcular</button>
-    </form>
+      
     
-</div>
+    </div>
 
     <div class="separador"></div>
     <!-- separador -->
