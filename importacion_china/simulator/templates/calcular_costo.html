@@ -45,37 +45,54 @@
         <h2 class="text-white">Ingrese los datos:</h2>
         <form method="post" action="/calcular_costo/" class="bg-dark text-white p-4 rounded">
           {% csrf_token %}
+
           <div class="form-group">
+            <span class="img-container">
+              <img src="{% static 'img/bolsa-de-la-compra.png' %}" alt="Nombre del Artículo">
+            </span>
             <label for="nombre_articulo" class="text-white">Nombre del Artículo:</label>
             <input type="text" name="nombre_articulo" id="nombre_articulo" class="form-control" required />
           </div>
           <div class="form-group">
+            <span class="img-container">
+              <img src="{% static 'img/datos.png' %}" alt="Codigo del Artículo">
+            </span>
             <label for="codigo_articulo" class="text-white">Código del Artículo:</label>
             <input type="text" name="codigo_articulo" id="codigo_articulo" class="form-control" required />
           </div>
           <div class="form-group">
+            <span class="img-container">
+              <img src="{% static 'img/mensajero.png' %}" alt="Proveedor">
+            </span>
             <label for="proveedor" class="text-white">Proveedor:</label>
             <input type="text" name="proveedor" id="proveedor" class="form-control" required />
           </div>
           <div class="form-group">
+            <span class="img-container">
+              <img src="{% static 'img/cantidad.png' %}" alt="Cantidad">
+            </span>
             <label for="cantidad_unidades" class="text-white">Cantidad de Unidades:</label>
             <input type="number" name="cantidad_unidades" id="cantidad_unidades" class="form-control" min="1" required />
           </div>
           <div class="form-group">
+            <span class="img-container">
+              <img src="{% static 'img/costo.png' %}" alt="Costo">
+            </span>
             <label for="costo_unitario_usd" class="text-white">Costo Unitario en USD:</label>
             <input type="number" step="0.01" name="costo_unitario_usd" id="costo_unitario_usd" class="form-control" min="0.01" required />
           </div>
           <div class="form-group">
+            <span class="img-container">
+              <img src="{% static 'img/costo-envio.png' %}" alt="CostoEnvio">
+            </span>
             <label for="costo_envio_usd" class="text-white">Costo de Envío a Chile en USD:</label>
             <input type="number" step="0.01" name="costo_envio_usd" id="costo_envio_usd" class="form-control" min="0.01" required />
           </div>
           <button type="submit" class="btn btn-primary btn-sm btn-block">Calcular</button>
         </form>
       </div>
-      
-    
+   
     </div>
-
     <div class="separador"></div>
     <!-- separador -->
 

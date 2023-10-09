@@ -102,3 +102,18 @@ footer {
  
 }
 /**/
+.resultado1{
+
+padding-top: 10px;
+padding-bottom: 10px;
+    background-color: rgb(158, 135, 5);
+    border-radius: 5px;
+   text-decoration-color: #000000;
+}
+
+/*ajustes iconos*/
+
+#nombre_articulo,#codigo_articulo,#proveedor,#cantidad_unidades,#costo_unitario_usd,#costo_envio_usd {
+    margin-bottom: 10px;
+    margin-top: 10px; /* Ajusta este valor según sea necesario */
+}
