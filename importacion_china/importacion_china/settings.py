@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 recordar instalar libreria ---pip install mysqlclient--
 
 python manage.py makemigrations
-python manage.py migrate
+python manage.py makemigrations
 
 python manage.py runserver
 """
