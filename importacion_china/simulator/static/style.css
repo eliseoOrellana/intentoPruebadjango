@@ -84,11 +84,11 @@ footer {
     padding-bottom: 10px;
   }
   #historial_table{
-    #contTable{
+    
         padding-top: 20px;
         padding-bottom: 10px;
-      }
-    padding-top: 100px;
+      
+    
   }
 
 #titulo-tabla{
@@ -101,3 +101,4 @@ footer {
     background-color: #bddeff;
  
 }
+/**/
