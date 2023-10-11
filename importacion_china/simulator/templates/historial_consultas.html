@@ -43,13 +43,13 @@
           <table id="historial_table" class="table table-striped" style="width:100%;">
             <thead>
               <tr class="table-active">
+                <th>ID</th>
                 <th>Nombre del Artículo</th>
                 <th>Código del Artículo</th>
                 <th>Proveedor</th>
                 <th>Cantidad de Unidades</th>
                 <th>Costo Unitario en USD</th>
                 <th>Costo de Envío en USD</th>
-
                 <th>Total Pedido en CLP</th>
                 <th>Costo de Envío en CLP</th>
                 <th>Tasa de Aduana en CLP</th>
@@ -62,8 +62,9 @@
             <tbody>
               {% for consulta in historial %}
                 <tr>
+                  <td>{{ consulta.simulacion.id }}</td>
                   <td>{{ consulta.simulacion.nombre_articulo }}</td>
-                  <td>{{ consulta.simulacion.codigo_articulo }}</td>
+                  <td >{{ consulta.simulacion.codigo_articulo }}</td>
                   <td>{{ consulta.simulacion.proveedor }}</td>
                   <td>{{ consulta.simulacion.cantidad_unidades }}</td>
                   <td>{{ consulta.simulacion.costo_unitario_usd }}</td>
@@ -121,8 +122,10 @@
       </footer>
 
       <script>
+
         new DataTable('#historial_table')
         table.clear().draw() // Limpiar los datos y redibujar la tabla
+
       </script>
     </div>
   </body>
