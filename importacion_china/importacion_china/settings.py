@@ -86,8 +86,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  # Usa el motor MySQL
         'NAME': 'importacion_db',             # Nombre de la base de datos que creaste
         'USER': 'root',                       # Usuario de la base de datos (por defecto, 'root')
-        'PASSWORD': '',                       # Contraseña de la base de datos (deja en blanco si no la configuraste)
-        'HOST': 'localhost',                  # Host de la base de datos (generalmente, 'localhost' para una base de datos local)
+        'PASSWORD': '',                       
+        'HOST': 'localhost',                  
         'PORT': '3306',                       # Puerto de la base de datos MySQL (por defecto, 3306)
     }
 }
