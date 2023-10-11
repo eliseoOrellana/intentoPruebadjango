@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.calcular_costo, name='calcular_costo'),
     path('calcular_costo/', views.calcular_costo, name='calcular_costo'),
-    path('historial/', views.historial_consultas, name='historial_consultas'),#borrrar si es necesatrio tema de historial
+    path('historial/', views.historial_consultas, name='historial_consultas'),
 ]
 

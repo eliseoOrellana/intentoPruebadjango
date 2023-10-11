@@ -10,6 +10,14 @@ class Simulacion(models.Model):
     costo_unitario_usd = models.DecimalField(max_digits=10, decimal_places=2)
     costo_envio_usd = models.DecimalField(max_digits=10, decimal_places=2)
 
+    # Nuevos campos para las variables faltantes
+    total_pedido_clp = models.PositiveIntegerField(default=0)
+    costo_envio_clp = models.PositiveIntegerField(default=0)
+    tasa_aduana_clp = models.PositiveIntegerField(default=0)
+    iva_clp = models.PositiveIntegerField(default=0)
+    total_impuestos_aduana_clp = models.PositiveIntegerField(default=0)
+    costo_total_compra_clp = models.PositiveIntegerField(default=0)
+
     def __str__(self):
         return self.nombre_articulo
     
