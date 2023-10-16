@@ -28,8 +28,8 @@ def calcular_impuestos(datos):
     costo_total_clp = total_pedido_clp + total_impuesto_aduana_clp  #aqui realice el cambio le quite la suma del envio 
     costo_total_usd = costo_total_clp / tipo_de_cambio
     
-    simulacion = Simulacion(**datos)
-    
+    simulacion = Simulacion(**datos)#nstancia de la clase Simulacion y pasando los valores contenidos en el diccionario datos como argumentos para inicializar esa instancia. 
+                                    #Esto permite crear un objeto de la clase Simulacion con atributos que se corresponden con las claves y valores del diccionario datos.
     # Asignar los nuevos valores al objeto simulacion
     simulacion.total_pedido_clp = int(total_pedido_clp)
     simulacion.costo_envio_clp = int(costo_envio_clp)
@@ -40,7 +40,7 @@ def calcular_impuestos(datos):
     
     simulacion.save()  # Guardar el objeto Simulacion en la base de datos
     
-    simulacion.save()
+    
     
     # Crear un registro en el historial después de guardar la simulación            
     historial = HistorialConsulta(simulacion=simulacion)

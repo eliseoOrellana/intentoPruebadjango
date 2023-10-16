@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from simulator import views 
 
+#URL patterns se utilizan para asignar URL específicas a vistas o funciones en tu aplicación web
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.calcular_costo, name='calcular_costo'),

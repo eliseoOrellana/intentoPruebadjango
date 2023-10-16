@@ -22,7 +22,7 @@ class Simulacion(models.Model):
         return self.nombre_articulo
     
     
-    #borrar si es necesario intenro de manejar historial
+    
     
 class HistorialConsulta(models.Model):
     
